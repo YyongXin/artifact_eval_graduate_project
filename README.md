@@ -111,6 +111,13 @@ reconfigure by `./configure`, and continues with normal building process. Note t
 `./bazel-bin/tensorflow/tools/pip_package/build_pip_package /tmp/tensorflow_pkg` will generate different pip wheel packages!
 ### REFs
 - <https://www.tensorflow.org/install/source>
+## 4.复现实验图表
+论文中实验图表的复现脚本在图表对应文件夹下运行
+```
+$ cd figure.x.y
+figure.x.y$ bash reproduce.sh 
+```
+运行脚本之后可以得到原文中图表
 ## 4.其他资源
 *   [TensorFlow.org](https://www.tensorflow.org)
 *   [TensorFlow tutorials](https://www.tensorflow.org/tutorials/)
