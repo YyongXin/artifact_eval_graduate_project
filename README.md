@@ -10,10 +10,8 @@
 
 ## 2.本分支主要内容
 - 代码仓库
-- 
 -	所有与METS相关的代码都可以从[https://github.com/YyongXin/tf-mets.git]访问得到。
 - 技术文档:
-
 
    -- 文档：包括如何构建，安装，测试TF-METS的详细指南
    
@@ -146,8 +144,3 @@ TensorFlow provides stable [Python](https://www.tensorflow.org/api_docs/python)
 and [C++](https://www.tensorflow.org/api_docs/cc) APIs, as well as
 non-guaranteed backwards compatible API for
 [other languages](https://www.tensorflow.org/api_docs).
-
-Keep up-to-date with release announcements and security updates by subscribing
-to
-[announce@tensorflow.org](https://groups.google.com/a/tensorflow.org/forum/#!forum/announce).
-See all the [mailing lists](https://www.tensorflow.org/community/forums).
