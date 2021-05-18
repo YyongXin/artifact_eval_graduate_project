@@ -118,7 +118,7 @@ $ cd figure.x.y
 figure.x.y$ bash reproduce.sh 
 ```
 运行脚本之后可以得到原文中图表
-## 4.其他资源
+## 5.其他资源
 *   [TensorFlow.org](https://www.tensorflow.org)
 *   [TensorFlow tutorials](https://www.tensorflow.org/tutorials/)
 *   [TensorFlow official models](https://github.com/tensorflow/models/tree/master/official)
@@ -132,7 +132,7 @@ figure.x.y$ bash reproduce.sh
 *   [TensorFlow roadmap](https://www.tensorflow.org/community/roadmap)
 *   [TensorFlow white papers](https://www.tensorflow.org/about/bib)
 *   [TensorBoard visualization toolkit](https://github.com/tensorflow/tensorboard)
-## 5.文档
+## 6.文档
 [TF-METS] TF-METS is a flexible and efficient deep learning training system that can train TensorFlow models with efficient memory usage efficiency, achieving high memory utilization and high efficiency.
 [TensorFlow](https://www.tensorflow.org/) is an end-to-end open source platform
 for machine learning. It has a comprehensive, flexible ecosystem of
