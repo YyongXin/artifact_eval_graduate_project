@@ -10,7 +10,8 @@
 
 ## 2.本分支主要内容
 - 代码仓库
--	所有与METS相关的代码都可以从[https://github.com/YyongXin/tf-mets.git]访问得到。
+	
+	所有与METS相关的代码都可以从[https://github.com/YyongXin/tf-mets.git]访问得到。
 - 技术文档:
 
    -- 文档：包括如何构建，安装，测试TF-METS的详细指南
