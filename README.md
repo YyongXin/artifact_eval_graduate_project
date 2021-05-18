@@ -1,9 +1,12 @@
 <div align="center">
   <img src="https://www.tensorflow.org/images/tf_logo_social.png">
 </div>
+
 # 毕业论文 Artifacts Evaluation
+
 ## 1.概述
 	此代码用于我的毕业论文的工件评估，题目为“深度学习训练系统的GPU内存优化研究”。
+
 ## 2.本分支主要内容
 - 代码仓库
 	所有与METS相关的代码都可以从https://github.com/YyongXin/tf-mets.git访问得到。
@@ -12,6 +15,7 @@
 	 -*Benchmark*：测试TF-METS的Benchmark模型代码
      -*完整性*：TF-METS的源码以及相关组件代码
      -*图表脚本*：论文中图表数据的复现脚本和相应原始数据
+
 ## 3.代码编译指南
 **Step 1:**
 
@@ -113,8 +117,6 @@ reconfigure by `./configure`, and continues with normal building process. Note t
 *   [TensorFlow white papers](https://www.tensorflow.org/about/bib)
 *   [TensorBoard visualization toolkit](https://github.com/tensorflow/tensorboard)
 ## 5.文档
-------------------- |
-[![Documentation](https://img.shields.io/badge/api-reference-blue.svg)](https://www.tensorflow.org/api_docs/) |
 [TF-METS] TF-METS is a flexible and efficient deep learning training system that can train TensorFlow models with efficient memory usage efficiency, achieving high memory utilization and high efficiency.
 [TensorFlow](https://www.tensorflow.org/) is an end-to-end open source platform
 for machine learning. It has a comprehensive, flexible ecosystem of
