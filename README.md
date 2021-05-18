@@ -5,15 +5,25 @@
 # 毕业论文 Artifacts Evaluation
 
 ## 1.概述
+
 	此代码用于我的毕业论文的工件评估，题目为“深度学习训练系统的GPU内存优化研究”。
 
 ## 2.本分支主要内容
 - 代码仓库
-	所有与METS相关的代码都可以从[https://github.com/YyongXin/tf-mets.git]访问得到。
+- 
+-	所有与METS相关的代码都可以从[https://github.com/YyongXin/tf-mets.git]访问得到。
 - 技术文档:
+
+
    -- 文档：包括如何构建，安装，测试TF-METS的详细指南
+   
+   
    -- Benchmark：测试TF-METS的Benchmark模型代码
+   
+   
    -- 完整性：TF-METS的源码以及相关组件代码
+   
+   
    -- 图表脚本：论文中图表数据的复现脚本和相应原始数据
 
 ## 3.代码编译指南
