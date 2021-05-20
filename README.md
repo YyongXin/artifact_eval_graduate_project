@@ -33,6 +33,7 @@
 ```
 $ conda create -n tf2-source python=3.6
 $ conda activate tf2-source
+$ pip3 intall -r requirements.txt
 ```
 最好选择`python3`，否则编译脚本会出现兼容性错误！！！
 
@@ -44,7 +45,7 @@ build过程中如果缺少相关的依赖模块，手工安装。
 Bazel安装可以从源github中release页面下载installer-xxx.sh
 
 ```
-$ ./bazel-0.29.1-installer-linux-x86_64.sh --user
+$ ./bazel-2.0.0-installer-linux-x86_64.sh --user
 ```
 安装在个人目录下，不需要sudo权限。
 **step 2:**
