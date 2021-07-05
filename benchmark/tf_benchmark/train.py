@@ -4,6 +4,7 @@ from tensorflow import keras
 from tensorflow.keras import datasets, layers, optimizers, Sequential, metrics
 import sys
 import time
+import argparse
 os.environ["CUDA_VISIBLE_DEVICES"] = "0"
 os.environ['TF_CPP_MIN_LOG_LEVEL'] = '1'
 tf.random.set_seed(2345)
@@ -12,7 +13,6 @@ from model.alexnet import AlexNet
 from model.vgg import VGG16,VGG19
 from model.inception_v4 import InceptionV4
 gpus = tf.config.experimental.list_physical_devices('GPU')
-size = [224,224]
 if gpus:
     try:
         # 设置GPU为增长式占用
@@ -27,26 +27,40 @@ def preprocess(x, y):
     y = tf.cast(y, dtype=tf.int32)
     return x, y
 
-batchsz = 176
-#[32, 32, 3], [10k, 1]
-(x,y), (x_val, y_val) = datasets.cifar100.load_data()
-y = tf.squeeze(y,axis=1)
-y_val = tf.squeeze(y_val,axis=1) #注意维度变换
-print(x.shape,y.shape,x_val.shape,y_val.shape)
-train_db = tf.data.Dataset.from_tensor_slices((x,y))
-train_db = train_db.shuffle(1000).map(preprocess).batch(batchsz)
-test_db = tf.data.Dataset.from_tensor_slices((x_val,y_val))
-test_db = test_db.map(preprocess).batch(batchsz)
-sample = next(iter(train_db))
-print('batch: ', sample[0].shape, sample[1].shape)
-
 def main():
-    model = resnet50()
-#     model = AlexNet()
-#     model = VGG16()
-#     model = VGG19()
-#     model = InceptionV4()
+    # 建立解析对象
+    parser = argparse.ArgumentParser() 
+    parser.add_argument("model",default=resnet50, type=str)
+    parser.add_argument("batchsize",default=16,type=str)
+    parser.add_argument("imgsize",default=224,type=str)
+    if parser.model=='resnet50':
+        model = resnet50()
+    elif parser.model=='AlexNet':
+        model = AlexNet()
+    elif parser.model=='VGG16':
+        model = VGG16()
+    elif parser.model=='VGG19':
+        model = VGG19()
+    elif parser.model=='InceptionV4':
+        model = InceptionV4()
+    else:
+        print("model not support")
+    size = [parser.imgsize,parser.imgsize]
     model.build(input_shape=(None,size[0],size[1],3))
+    
+    # build dataset
+    batchsz = parser.batchsize
+    (x,y), (x_val, y_val) = datasets.cifar100.load_data()
+    y = tf.squeeze(y,axis=1)
+    y_val = tf.squeeze(y_val,axis=1) #注意维度变换
+    print(x.shape,y.shape,x_val.shape,y_val.shape)
+    train_db = tf.data.Dataset.from_tensor_slices((x,y))
+    train_db = train_db.shuffle(1000).map(preprocess).batch(batchsz)
+    test_db = tf.data.Dataset.from_tensor_slices((x_val,y_val))
+    test_db = test_db.map(preprocess).batch(batchsz)
+    sample = next(iter(train_db))
+    print('batch: ', sample[0].shape, sample[1].shape)
+    # build optimizer
     optimizer = optimizers.Adam(lr=1e-4)
     #拼接需要训练的参数 [1,2] + [3,4] = [1,2,3,4]
     #训练过程
