@@ -6,7 +6,7 @@
 
 ## 1.概述
 
-	此代码用于我的毕业论文的工件评估，题目为“深度学习训练系统的GPU内存优化研究”。
+	此代码用于我的毕业论文的工件评估，题目为“深度学习训练系统的GPU内存优化研究”。论文链接<https://docs.qq.com/pdf/DS2RreENIUmhYeVhu>
 
 ## 2.本分支主要内容
 - 代码仓库
@@ -112,14 +112,21 @@ reconfigure by `./configure`, and continues with normal building process. Note t
 `./bazel-bin/tensorflow/tools/pip_package/build_pip_package /tmp/tensorflow_pkg` will generate different pip wheel packages!
 ### REFs
 - <https://www.tensorflow.org/install/source>
-## 4.复现实验图表
+## 4.用一个简单的示例开启
+```
+cd benchmark/tf_benchmark/
+python train.py --batchsize=16 --model=resnet50
+```
+执行上述命令，可以完成简单的模型训练。
+## 5.复现实验图表
 论文中实验图表的复现脚本在图表对应文件夹下运行
 ```
 $ cd figure.x.y
 figure.x.y$ bash reproduce.sh 
 ```
 运行脚本之后可以得到原文中图表
-## 5.其他资源
+### 关于系统的性能数据，详见论文。
+## 6.其他资源
 *   [TensorFlow.org](https://www.tensorflow.org)
 *   [TensorFlow tutorials](https://www.tensorflow.org/tutorials/)
 *   [TensorFlow official models](https://github.com/tensorflow/models/tree/master/official)
@@ -133,7 +140,7 @@ figure.x.y$ bash reproduce.sh
 *   [TensorFlow roadmap](https://www.tensorflow.org/community/roadmap)
 *   [TensorFlow white papers](https://www.tensorflow.org/about/bib)
 *   [TensorBoard visualization toolkit](https://github.com/tensorflow/tensorboard)
-## 6.文档
+## 7.文档
 [TF-METS] TF-METS is a flexible and efficient deep learning training system that can train TensorFlow models with efficient memory usage efficiency, achieving high memory utilization and high efficiency.
 [TensorFlow](https://www.tensorflow.org/) is an end-to-end open source platform
 for machine learning. It has a comprehensive, flexible ecosystem of
